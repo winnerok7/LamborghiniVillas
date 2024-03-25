@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lamborghini Villas</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="./logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="cursor"></div>
+
+       <div class="main">
+         <div class="main-wrapper">
+
+
+            <div class="overlay" id="myNav">
+               <img class="ov_icon" src="images/logo.png"/>
+               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+               <!-- Overlay content -->
+               <div class="overlay-content">
+                 <a class="menu_link link1" href="#"><span class="num_link">01</span>VILLAS CATALOGUE</a>
+                 <a class="menu_link link2" href="#"><span class="num_link">02</span>THE GALLERY</a>
+                 <a class="menu_link link3" href="#"><span class="num_link">03</span>PROJECT LOCATION</a>
+                 <a class="menu_link link4" href="#"><span class="num_link">04</span>MAIN DOCUMENTS</a>
+                 <a class="menu_link link5" href="#"><span class="num_link">05</span>FEATURES</a>
+               </div>
+      
+             </div>
+
+             <div class="overlay2" id="myNav2">
+               <!-- Overlay content -->
+               <div class="overlay-content2">
+                  <img class="ov_icon" src="images/logo.png"/>
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+                  <div class="ovr overlay_form">
+                     <form action="index.html" autocomplete="off">
+                        <div class="input-container">
+                          <input type="text" name="name" class="input2" placeholder="Name" />
+                        </div>
+                        <div class="input-container">
+                          <input type="email" name="email" class="input2" placeholder="Email" />
+                        </div>
+                        <div class="input-container">
+                          <input type="tel" name="phone" class="input2" placeholder="Phone" />
+                        </div>
+                        <div class="input-container textarea">
+                          <textarea name="message" class="input2" rows="4" placeholder="Comments"></textarea>
+                        </div>
+                        <input type="submit" value="Send" class="btn" />
+                      </form>
+                  </div>
+                  <div class="ovr overlay_socials">
+                     <a href="#"><img class="logo4" src="images/logo.png"/></a>
+                     <span class="sc_txt">Contact Us</span>
+                     <div class="social-icons-btn2">
+                        <a class="icons twitter"  href="#">
+                          <img src="images/icons/icons8-facebook-144.png" class="ico facebook"></img>
+                        </a>
+                        <a class="icons facebook"  href="#">
+                          <img src="images/icons/icons8-instagram-144.png" class="ico instagram"></img>
+                        </a>
+                        <a class="icons instagram"  href="#">
+                          <img src="images/icons/icons8-whatsapp-144.png" class="ico whatsapp"></img>
+                        </a>
+                        <a class="icons linkedin"  href="#">
+                          <img src="images/icons/icons8-telegram-app-144.png" class="ico telegram"></img>
+                        </a>
+                      </div>
+                     <span class="sc_tel">+34623422622</span>
+                     <span class="sc_email">estate@svoy.es</span>
+                  </div>
+               </div>
+
+               </div>
+      
+             </div>
+
+
+             <div class="popup_section" id="popup">
+               <div class="slider2">
+                  <a href="javascript:void(0)" class="close" onclick="closeModal()">&times;</a>
+                  <!-- Slider main container -->
+                  <div class="swiper swp2" id="swiper-3">
+                     <!-- Additional required wrapper -->
+                     <div class="swiper-wrapper">
+                     <!-- Slides -->
+                        <div class="swiper-slide sw2">
+                              <img src="images/golf.webp"/>
+                              <span class="swiper_text2">El Higueral Golf</span>
+                           
+                        </div>
+                        <div class="swiper-slide sw2">
+                           <img src="images/sea.webp"/>
+                           <span class="swiper_text2">15min to sea</span>
+                        
+                        </div>
+                        <div class="swiper-slide sw2">
+                           <img src="images/feature2.webp"/>
+                           <span class="swiper_text2">Puerto Banus</span>
+                     
+                        </div>
+                        <div class="swiper-slide sw2">
+                           <img src="images/casino.webp"/>
+                           <span class="swiper_text2">Casino Marbella</span>
+                     
+                        </div>
+                        <div class="swiper-slide sw2">
+                           <img src="images/feature1.webp"/>
+                           <span class="swiper_text2">Atalaya Internacional</span>
+                     
+                        </div>
+         
+                     </div>
+
+                                          <!-- If we need pagination -->
+                     <div class="swiper-pagination"></div>
+
+
+                  </div>
+                      <!-- If we need navigation buttons -->
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+               </div>
+            </div>
+
+
+            
+            <div class="initial_section">
+               <img class="logo" src="images/logo.png"/>
+               <p class="logo_text" style="display: none;">Lamborghini</p>
+               <div class="loader">
+                  <div class="loader-1 bar"></div>
+                  <div class="loader-2 bar"></div>
+                </div>
+                <div class="counter">
+                  <div class="counter-1 digit">
+                    <div class="num">0</div>
+                    <div class="num num1offset1">1</div>
+                  </div>
+                  <div class="counter-2 digit">
+                    <div class="num">0</div>
+                    <div class="num num1offset2">1</div>
+                    <div class="num">2</div>
+                    <div class="num">3</div>
+                    <div class="num">4</div>
+                    <div class="num">5</div>
+                    <div class="num">6</div>
+                    <div class="num">7</div>
+                    <div class="num">8</div>
+                    <div class="num">9</div>
+                    <div class="num">0</div>
+                         
+                  </div>
+                  <div class="counter-3 digit">
+                    <div class="num">0</div>
+                    <div class="num">1</div>
+                    <div class="num">2</div>
+                    <div class="num">3</div>
+                    <div class="num">4</div>
+                    <div class="num">5</div>
+                    <div class="num">6</div>
+                    <div class="num">7</div>
+                    <div class="num">8</div>
+                    <div class="num">9</div>
+                         
+                  </div>
+                      <div class="counter-4 digit">
+                    <div class="num">%</div>
+                    
+                         
+                  </div>
+                </div>
+            </div>
+              
+               <div class="hero_section">
+                  <video autoplay muted loop id="myVideo">
+                     <source src="video/video3.webm" type="video/webm">
+                   </video>
+                   <div class="overlay_video"></div>
+                  <div class="hero_header">
+                     <div class="hero hero_header_logo">
+                        <a href="home.html"><img class="logo2" src="images/logo.png"/></a>
+                     </div>
+                     <div class="hero hero_header_menu">
+                        <ul class="menu">
+                           <li class="hero_text">Villas</li>
+                           <li class="hero_text">Gallery</li>
+                           <li class="hero_text">Exterior</li>
+                        </ul>
+
+                        <ul class="menu">
+                           <li class="hero_text">Location</li>
+                           <li class="hero_text">Contacts</li>
+                        </ul>
+                        
+                     </div>
+                     <div class="hero hero_header_buttons">
+                        <span class="hero_text2" style="cursor: pointer;" onclick="openNav()">MENU</span>
+                        <span class="hero_text2" style="cursor: pointer;" onclick="openNav2()">GET MORE</span>
+                     </div>
+                     <div class="hero hero_header_burgermenu">
+                        <img class="burger_menu" src="images/icons/output-onlinepngtools.png" onclick="openNav()"/>
+                     </div>
+         
+
+                  </div>
+
+                  <div class="hero_footer">
+                     <div class="hero_footer_name">
+                        <span><span style="color: #D8A016">UNIQUE</span> VILLAS</span>
+                     </div>
+                     <div class="hero_footer_location">
+                        <span>
+                           Benahavis,
+                        </span>
+                        <span>
+                           Marbella,Spain
+                        </span>
+                        <span>
+                           36.488756,-5.0359649
+                        </span>
+                     </div>
+                  </div>
+               </div>
+
+
+               <div class="villas_section">
+                  <div class="prev_text">
+                     <span>Villas Collection</span>
+                  </div>
+
+                  <div class="villas_grid">
+                     <div class="villas_grid_single villa-1">
+                        <span class="villa_name">Diamante Villa</span>
+                        <a href="villa-diamante.html"><span class="learn_more">Learn More</span></a>
+                        <span class="villa_number">VILLA I</span>
+                     </div>
+                     <div class="villas_grid_single villa-2">
+                        <span class="villa_name">Zafiro Villa</span>
+                        <span class="learn_more">Learn More</span>
+                        <span class="villa_number">VILLA II</span>
+                     </div>
+                     <div class="villas_grid_single villa-3">
+                        <span class="villa_name">Esmeralda Villa</span>
+                        <span class="learn_more">Learn More</span>
+                        <span class="villa_number">VILLA III</span>
+                     </div>
+                     <div class="villas_grid_single villa-4">
+                        <span class="villa_name">Marbella</span>
+                        <span class="learn_more">Click here</span>
+                        <span class="villa_number">MORE..</span>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="text_section">
+                  <span class="ts">Explore unique expirience</span>
+                  <span class="ts">of <text style="color: #D8A016;">lamborghini</text> villas</span>
+                  <span class="ts">in heart of Spain</span>
+               </div>
+
+               <div class="text_section2">
+                  <span>Marbella is a Los Angeles in</span>
+                  <span>Spain traditions. Second Dubai</span>
+                  <span>of Europe</span>
+               </div>
+               
+
+               <div class="gallery">
+                  <a><span class="g_text" style="z-index: 10;" onclick="openModal()">GALLERY</span></a>
+                  <div class="explore" onclick="openModal()"><img class="explore_img" src="images/cursor.png"/></div>
+                  <img class="g_img img1" src="images/gallery/DG.AL_Diamente Villa Ext 1.webp"/>
+                  <img class="g_img img2" src="images/gallery/DG.AL_Esmeralda Villa_Ext 2.webp"/>
+                  <img class="g_img img3" src="images/gallery/DG.AL_Diamente Villa Ext 3.webp"/>
+                  <img class="g_img img4" src="images/gallery/DG.AL_Zafiro Villa_Ext 1.jpg"/>
+                  <img class="g_img img5" src="images/gallery/DG.AL_Diamente Villa_ID_MasterBedroom.webp"/>
+                  <img class="g_img img6" src="images/gallery/DG.AL_Diamente Villa_ID_Kitchen Dining.webp"/>
+                  <img class="g_img img7" src="images/gallery/DG.AL_Diamente Villa_ID_Living.webp"/>
+               </div>
+               
+
+               <div class="about_section">
+                  <div class="about_text">
+                     <span class="text1">INFRASTRUCTURE</span>
+                     <span class="text2">ABOUT</span>
+                  </div>
+
+                  <div class="slider swp1">
+                     <!-- Slider main container -->
+                     <div class="swiper" id="swiper-2">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                           <div class="swiper-slide">
+                                 <img src="images/golf.webp"/>
+                                 <span class="swiper_text">El Higueral Golf</span>
+                              
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="images/sea.webp"/>
+                              <span class="swiper_text">15min to sea</span>
+                           
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="images/feature2.webp"/>
+                              <span class="swiper_text">Puerto Banus</span>
+                        
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="images/casino.webp"/>
+                              <span class="swiper_text">Casino Marbella</span>
+                        
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="images/feature1.webp"/>
+                              <span class="swiper_text">Atalaya Internacional</span>
+                        
+                           </div>
+            
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+
+               <div class="docs_section">
+                  <span class="md_text">MAIN DOCS</span>
+                  <div class="docs_grid">
+                     <div class="docs_grid_section g1">
+                        <span class="first_text">Plan of project</span>
+                        <span class="second_text">Download</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.464 58.271"><g stroke-width="1" transform="translate(-1624 -187.923)"><path d="M50.464 43.992L25.732 58.271 1 43.992V15.434L25.732 1.155l24.732 14.279z" transform="translate(1623.5 187.345)" class="hexagon on-dark"></path><path class="icon on-dark" d="M0 0l7.432 5.674L14.864 0" transform="rotate(-90 935.432 -711.068)"></path></g></svg>
+                     </div>
+
+                     <div class="docs_grid_section g5">
+                        <span class="first_text">Brochure</span>
+                        <span class="second_text">Download</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.464 58.271"><g stroke-width="1" transform="translate(-1624 -187.923)"><path d="M50.464 43.992L25.732 58.271 1 43.992V15.434L25.732 1.155l24.732 14.279z" transform="translate(1623.5 187.345)" class="hexagon on-dark"></path><path class="icon on-dark" d="M0 0l7.432 5.674L14.864 0" transform="rotate(-90 935.432 -711.068)"></path></g></svg>
+                     </div>
+
+                     <div class="docs_grid_section g1 g6">
+                        <span class="first_text">Price list</span>
+                        <span class="second_text">Download</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.464 58.271"><g stroke-width="1" transform="translate(-1624 -187.923)"><path d="M50.464 43.992L25.732 58.271 1 43.992V15.434L25.732 1.155l24.732 14.279z" transform="translate(1623.5 187.345)" class="hexagon on-dark"></path><path class="icon on-dark" d="M0 0l7.432 5.674L14.864 0" transform="rotate(-90 935.432 -711.068)"></path></g></svg>
+                     </div>
+
+                     <div class="docs_grid_section g2">
+                        <span class="first_text">Concept</span>
+                        <span class="second_text">Download</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.464 58.271"><g stroke-width="1" transform="translate(-1624 -187.923)"><path d="M50.464 43.992L25.732 58.271 1 43.992V15.434L25.732 1.155l24.732 14.279z" transform="translate(1623.5 187.345)" class="hexagon on-dark"></path><path class="icon on-dark" d="M0 0l7.432 5.674L14.864 0" transform="rotate(-90 935.432 -711.068)"></path></g></svg>
+                     </div>
+
+                     <div class="docs_grid_section g4">
+
+                     </div>
+
+                     <div class="docs_grid_section g3">
+                        <span class="first_text">Amenities</span>
+                        <span class="second_text">Download</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.464 58.271"><g stroke-width="1" transform="translate(-1624 -187.923)"><path d="M50.464 43.992L25.732 58.271 1 43.992V15.434L25.732 1.155l24.732 14.279z" transform="translate(1623.5 187.345)" class="hexagon on-dark"></path><path class="icon on-dark" d="M0 0l7.432 5.674L14.864 0" transform="rotate(-90 935.432 -711.068)"></path></g></svg>
+                     </div>
+                  </div>
+               </div>
+
+
+               <div class="features_section">
+                  <span class="ft_text">FEATURES</span>
+                  <div class="features_single_section">
+                     <div class="feature_text">
+                        <span class="feature_text_big">Explore unique expirience</span>
+                        <span class="feature_text_small">Marbella is a Los Angeles in Spain traditions. Second Dubai of Europe</span>
+                     </div>
+                     <div class="feature_image">
+                        <img src="images/feature1.webp"/>
+                     </div>
+                  </div>
+
+                  <div class="features_single_section">
+                     <div class="feature_image2">
+                        <img src="images/feature2.webp"/>
+                     </div>
+
+                     <div class="feature_text2">
+                        <span class="feature_text_small2">Marbella is a Los Angeles in Spain traditions. Second Dubai of Europe</span>
+                        <span class="feature_text_big2">Explore unique expirience</span>
+                     </div>
+
+
+                  </div>
+
+                  <div class="features_single_section">
+
+                     <div class="feature_text3 ">
+                        <span class="feature_text_big3">Explore unique expirience</span>
+                        <span class="feature_text_small3">Marbella is a Los Angeles in Spain traditions. Second Dubai of Europe</span>
+                        
+                     </div>
+
+                     <div class="feature_image3">
+                        <img src="images/feature3.webp"/>
+                     </div>
+                  </div>
+
+               </div>
+
+               <div class="footer" style="min-height: 900px; background-color: black;">
+                  <div class="footer_single_section email_form">
+                     <form action="index.html" autocomplete="off">
+                        <h3 class="form_title">Contact us</h3>
+                        <div class="input-container">
+                          <input type="text" name="name" class="input" placeholder="Name" />
+                        </div>
+                        <div class="input-container">
+                          <input type="email" name="email" class="input" placeholder="Email" />
+                        </div>
+                        <div class="input-container">
+                          <input type="tel" name="phone" class="input" placeholder="Phone" />
+                        </div>
+                        <div class="input-container textarea">
+                          <textarea name="message" class="input" rows="4" placeholder="Comments"></textarea>
+                        </div>
+                        <input type="submit" value="Send" class="btn" />
+                      </form>
+                  </div>
+                  <div class="footer_single_section socials">
+                     <a href="#"><img class="logo3" src="images/logo.png"/></a>
+                     <div class="social-icons-btn">
+                        <a class="icons twitter"  href="#">
+                          <img src="images/icons/icons8-facebook-144.png" class="ico facebook"></img>
+                        </a>
+                        <a class="icons facebook"  href="#">
+                          <img src="images/icons/icons8-instagram-144.png" class="ico instagram"></img>
+                        </a>
+                        <a class="icons instagram"  href="#">
+                          <img src="images/icons/icons8-whatsapp-144.png" class="ico whatsapp"></img>
+                        </a>
+                        <a class="icons linkedin"  href="#">
+                          <img src="images/icons/icons8-telegram-app-144.png" class="ico telegram"></img>
+                        </a>
+                      </div>
+                     <span class="sc_tel">+34623422622</span>
+                     <span class="sc_email">estate@svoy.es</span>
+                  </div>
+               </div>
+
+         </div>
+       </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

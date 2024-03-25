@@ -1,0 +1,2589 @@
+
+@font-face {
+   font-family: "PP Neue Montreal";
+   src: url(../fonts/Neue/PPNeueMontreal-Thin.otf) format('opentype');
+   font-weight: 100;
+}
+
+@font-face {
+   font-family: "PP Neue Montreal";
+   src: url(../fonts/Neue/PPNeueMontreal-Book.otf) format('opentype');
+   font-weight: 300;
+}
+
+@font-face {
+   font-family: "PP Neue Montreal";
+   src: url(../fonts/Neue/PPNeueMontreal-Medium.otf) format('opentype');
+   font-weight: 500;
+}
+
+@font-face {
+   font-family: "PP Neue Montreal";
+   src: url(../fonts/Neue/PPNeueMontreal-Bold.otf) format('opentype');
+   font-weight: 700;
+}
+
+@font-face {
+   font-family: "La Macchina";
+   src: url(../fonts/LaMacchina.ttf) format('truetype');
+}
+
+
+@font-face {
+   font-family: "Helvetica Neue";
+   src: url(../fonts/HelveticaNeue/HelveticaNeueLight.otf) format('opentype');
+}
+
+
+
+.main{
+   background-color: black;
+   overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+   display: none;
+ }
+
+.main2{
+   background: white;
+   overflow: hidden;
+}
+
+.hero_text:hover{
+   text-shadow:  2px 2px 5px rgba(255,255,255, 1.5);
+   cursor: pointer;
+}
+
+
+.burger_menu{
+   width: 10px;
+   height: 10px;
+}
+
+
+
+
+.cursor {
+   position: absolute;
+   background: white;
+   opacity: 0;
+   width: 8px;
+   height: 8px;
+   border-radius: 100%;
+   z-index: 20;
+   transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+       0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+   user-select: none;
+   pointer-events: none;
+   transform: scale(0.8);
+}
+
+.cursor::before {
+   content: "";
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: block;
+   background-image: url("../images/cursor.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 100%;
+   opacity: 0;
+}
+
+.cursor.active {
+   opacity: 1;
+   transform: scale(18);
+}
+
+.cursor.active::before {
+   opacity: 1;
+}
+
+.g_text{
+   cursor: none;
+}
+
+
+.explore_img{
+   width: 150px;
+   height: 150px;
+   margin-top: 30px;
+}
+
+.explore{
+   display: none;
+   z-index: 50;
+}
+
+.explore_img{
+   box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+   -webkit-animation: pulse 1s infinite;
+   animation: shadow-pulse 1.2s infinite;
+   border-radius: 200px;
+ }
+ 
+ 
+ @keyframes shadow-pulse
+ {
+   0% {
+     box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.7);
+   }
+   100% {
+     box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+   }
+ }
+
+
+ .sign{
+   padding: 10px;
+   display: flex;
+   justify-content: end;
+   text-align: end;
+   font-size: 12px;
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   text-decoration: none;
+ }
+
+ .sign a{
+   text-decoration: none;
+ }
+
+ .svoy{
+   font-family: 'Tenor Sans', serif;
+   color: rgb(255, 119, 0);
+   font-size: 24px;
+ }
+
+
+ .thanks{
+   background-color: black;
+   height: 100vh;
+ }
+
+ .thx_wrapper{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+ }
+
+
+ .thanks_text{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 900px;
+ }
+
+ .thx_txt1{
+   font-family: 'PP Neue Montreal', serif;
+   color: white;
+   font-weight: 300;
+   font-size: 45px;
+   margin-bottom: 15px;
+ }
+
+ .thx_txt2{
+   font-family: 'PingFang SC', serif;
+   color: #C1BEBE;
+   font-weight: 200;
+   font-size: 21px;
+ }
+
+ .thanks_vars{
+   display: flex;
+   justify-content: center;
+   width: 900px;
+   margin-top: 100px;
+ }
+
+ .thanks_vars a{
+   text-decoration: none;
+ }
+
+
+ .thx_lambo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+ }
+
+ .thx_lambo span{
+   font-family: 'PP Neue Montreal', serif;
+   color: white;
+   font-weight: 300;
+   font-size: 21px;
+ }
+
+ .thx_lambo img{
+   border-right: 1px solid #C1BEBE;
+   padding-right: 15px;
+   margin-right: 15px;
+ }
+
+ .thx_svoy span{
+   font-family: 'PP Neue Montreal', serif;
+   color: white;
+   font-weight: 300;
+   font-size: 21px;
+ }
+
+ .thx_svoy img{
+   border-right: 1px solid #C1BEBE;
+   padding-right: 15px;
+   margin-right: 15px;
+ }
+
+
+ .thx_svoy{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+ }
+
+
+ .thx_svoy span:hover{
+   cursor: pointer;
+   text-decoration: underline;
+ }
+
+ .thx_lambo span:hover{
+   cursor: pointer;
+   text-decoration: underline;
+ }
+
+
+/* SWIPER */
+
+
+.swiper {
+   width: 100%;
+   max-height: 600px;
+   margin-top: 120px;
+ }
+
+ .swiper-slide{
+   padding-bottom: 50px;
+   height: 600px;
+ }
+
+ .swiper-slide img{
+   width: 100%;
+   height: 500px;
+   object-fit: cover;
+   object-position: center center;
+ }
+
+ .swiper_text{
+   font-family: 'PP Neue Montreal', serif;
+   color: white;
+   font-weight: 200;
+   font-size: 40px;
+ }
+
+
+/* Initial section */
+
+.initial_section{
+   background-color: black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   pointer-events: none;
+	 overflow: hidden;
+	 z-index: 9999;
+}
+
+.logo{
+   opacity: 0;
+   width: 46px;
+   height: 53px;
+}
+
+.logo2{
+   width: 30px;
+   height: 35px;
+}
+
+.logo3{
+   width: 45px;
+   height: 54px;
+   margin-bottom: 70px;
+}
+
+.logo_text{
+   position: absolute;
+   bottom: 10px;
+   left: 35px;
+   font-family: 'La Macchina', serif;
+   font-size: 28px;
+   color: white;
+}
+
+
+
+.counter {
+   opacity: 0;
+   position: fixed;
+   right: 50px;
+   bottom: 30px;
+   display: flex;
+   height: 36px;
+   font-size: 36px;
+   line-height: 36px;
+   clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100px);
+   font-weight: 400;
+    color: white;
+    font-family: "Helvetica Neue", "sans-serif";
+    overflow: hidden;
+ }
+ 
+ .counter-1,
+ .counter-2,
+ .counter-3,
+ .counter-4{
+   position: relative;
+   top: 0px;
+    
+ }
+ 
+ .num1offset1 {
+   position: relative;
+   right: -5px;
+ }
+ 
+ .num1offset2 {
+   position: relative;
+ 
+ }
+
+
+/* Hero section */
+
+
+
+.hero_section{
+   position: relative;
+   height: 97vh;
+   background-image: url('../images/hero.png');
+   background-position: center; /* Center the image */
+   background-repeat: no-repeat; /* Do not repeat the image */
+   background-size: cover; /* Resize the background image to cover the entire container */
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   padding: 15px;
+}
+
+
+#myVideo {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: 3;
+ }
+
+ #myVideo2{
+   display: none;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: 3;
+
+ }
+
+ .overlay_video{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.4);
+   z-index: 4;
+ }
+
+ .hero_header{
+   z-index: 5;
+ }
+
+ .hero_footer{
+   z-index: 5;
+ }
+
+.hero_header{
+   display: flex;
+   justify-content: space-between;
+   padding: 10px 10px;
+}
+
+
+.hero{
+   width: 33%;
+}
+
+.hero_header_menu{
+   display: flex;
+   justify-content: center;
+   gap: 35px;
+}
+
+.hero_header_burgermenu{
+   display: none;
+}
+
+.hero_text{
+   font-family: 'PP Neue Montreal', serif;
+   color: white;
+   font-weight: 200;
+   font-size: 18px;
+
+}
+
+.menu{
+  margin: 0px;
+  list-style-type: none ;
+  padding-left: 0px;
+}
+
+.menu li{
+   margin-bottom: 5px;
+}
+
+
+.hero_header_buttons{
+   display: flex;
+   justify-content: flex-end;
+   gap: 50px;
+
+}
+
+.hero_text2{
+   font-family: 'PP Neue Montreal', serif;
+   color: white;
+   font-weight: 100;
+   font-size: 18px;
+
+}
+
+
+.hero_footer{
+   display: flex;
+   justify-content: space-between;
+}
+
+.hero_footer_name{
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   align-items: end;
+}
+
+.hero_footer_name span{
+   margin-top: 10px;
+   font-family: 'PP Neue Montreal', serif;
+   color: white;
+   font-weight: 300;
+   font-size: 130px;
+   
+}
+
+.hero_footer_name span::selection {
+   background: black;
+ }
+
+.hero_footer_location{
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   align-items: end;
+   color: white;
+   margin-bottom: 15px;
+}
+
+.hero_footer_location span{
+   font-family: 'PingFang SC', serif;
+   font-weight: 100;
+   font-size: 28px;
+   text-align: end;
+   color: #C1BEBE;
+}
+
+
+
+
+/* Villas Section */
+
+.villas_section{
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 120px;
+   padding-bottom: 120px;
+}
+
+
+.prev_text{
+   margin-bottom: 50px;
+}
+
+.prev_text span{
+   font-family: 'PingFang SC', serif;
+   font-weight: 100;
+   font-size: 24px;
+   color: #C1BEBE;
+}
+
+
+.villas_grid{
+   display: flex;
+   flex-direction: row;
+}
+
+
+.villas_grid_single{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: end;
+   width: 25%;
+   min-height: 450px;
+   border-left:  1px solid #6a6a6a;
+}
+
+.villas_grid > div:first-child{
+   border-left: 0px;
+}
+
+
+.villa_number{
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-size: 65px;
+   font-weight: 300;
+}
+
+
+.villa_name{
+   position: absolute;
+   top: 35px;
+   left: 0;
+   display: block;
+   width: 100%;
+   text-align: center;
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 100;
+   font-size: 36px;
+   opacity: 0;
+   transition: all 0.5s ease;
+   z-index: 3;
+}
+
+
+.learn_more{
+   position: absolute;
+   bottom: 20px;
+   left: 0;
+   display: block;
+   width: 100%;
+   text-align: center;
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   font-size: 24px;
+   opacity: 0;
+   transition: all 0.5s ease;
+   text-decoration: underline;
+   z-index: 3;
+}
+
+.villa-1,
+.villa-2,
+.villa-3,
+.villa-4{
+   position: relative;
+   background-color: black;
+   background-size: cover;
+   background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.villa-1::before,
+.villa-2::before,
+.villa-3::before,
+.villa-4::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: inline-block;
+   border-right: 3px solid #D8A016;
+   width: 100%;
+   height: 100%;
+   z-index: 2;
+ }
+
+
+ .villa-1::before{
+   background: url('../images/villas/Diamante.webp') rgba(0, 0, 0, 0.3);
+   background-blend-mode: multiply;
+   background-position: center center;
+   background-size: cover;
+   opacity: 0;
+   transition: opacity 0.5s;
+ }
+
+ .villa-2::before{
+   background: url('../images/villas/Zafiro.webp') rgba(0, 0, 0, 0.3);
+   background-blend-mode: multiply;
+   background-position: center center;
+   background-size: cover;
+   opacity: 0;
+   transition: opacity 0.5s;
+ }
+
+ .villa-3::before{
+   background: url('../images/villas/Esmeralda.webp') rgba(0, 0, 0, 0.3);
+   background-blend-mode: multiply;
+   background-position: center center;
+   background-size: cover;
+   opacity: 0;
+   transition: opacity 0.5s;
+ }
+
+ .villa-4::before{
+   background: url('../images/marbella.webp') rgba(0, 0, 0, 0.3);
+   background-blend-mode: multiply;
+   background-position: center center;
+   background-size: cover;
+   opacity: 0;
+   transition: opacity 0.5s;
+ }
+ 
+ .villa-1:hover::before,
+ .villa-2:hover::before,
+ .villa-3:hover::before,
+ .villa-4:hover::before{
+   opacity: 1;
+ }
+
+
+ .villas_grid_single:hover .villa_name,
+ .villas_grid_single:hover .learn_more
+ {
+   opacity: 1;
+ }
+
+
+
+ /* Text section */
+
+ .text_section{
+   padding: 180px 75px 120px 75px;
+ }
+
+ .text_section span{
+   text-align: end;
+   display: block;
+   font-size: 65px;
+   font-family: 'PP Neue Montreal', serif;
+   color: white;
+   font-weight: 300;
+ }
+
+ .text_section2{
+   padding: 50px 75px 120px 75px;
+ }
+ 
+
+ .text_section2 span{
+   display: block;
+   font-family: 'PingFang SC', serif;
+   font-weight: 100;
+   font-size: 28px;
+   text-align: start;
+   color: #C1BEBE;
+}
+
+
+
+ /* Gallery */
+
+ .gallery{
+   display: flex;
+   justify-content: center;
+   position: relative;
+   padding: 600px 75px 600px 75px;
+ }
+
+.gallery span{
+   position: relative;
+   display: inline-block;
+   text-align: center;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   color: white;
+   font-size: 130px;
+}
+
+
+.img1{
+   position: absolute;
+   top: 10%;
+   left: 10%;
+   width: 150px;
+   height: 150px;
+   object-fit: cover;
+   object-position: center center;
+   z-index: 2;
+}
+
+.img2{
+   position: absolute;
+   top:15%;
+   left: 15%;
+   width: 350px;
+   height: 350px;
+   object-fit: cover;
+   object-position: center center;
+   z-index: 1;
+}
+
+.img3{
+   position: absolute;
+   top:5%;
+   right: 5%;
+   width: 250px;
+   height: 300px;
+   object-fit: cover;
+   object-position: center center;
+   z-index: 4;
+}
+
+.img4{
+   position: absolute;
+   top:25%;
+   right: 15%;
+   width: 400px;
+   height: 300px;
+   object-fit: cover;
+   object-position: center center;
+   z-index: 3;
+}
+
+.img5{
+   position: absolute;
+   top:50%;
+   left: 10%;
+   width: 500px;
+   height: 300px;
+   object-fit: cover;
+   object-position: center center;
+   z-index: 5;
+}
+
+.img6{
+   position: absolute;
+   top:55%;
+   right: 30%;
+   width: 250px;
+   height: 250px;
+   object-fit: cover;
+   object-position: center center;
+   z-index: 7;
+}
+
+
+.img7{
+   position: absolute;
+   top: 70%;
+   right: 0%;
+   width: 600px;
+   height: 200px;
+   object-fit: cover;
+   object-position: center center;
+   z-index: 6;
+}
+
+
+
+
+ /* About */
+
+.about_section{
+   padding: 120px 0px 120px 0px;
+ }
+
+ .about_text{
+   padding-left: 75px;
+   padding-right: 75px;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .about_text .text1{
+   font-family: 'PingFang SC', serif;
+   font-weight: 100;
+   font-size: 28px;
+   color: #C1BEBE;
+   margin-top: 15px;
+
+ }
+
+ .about_text .text2{
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   color: white;
+   font-size: 130px;
+ }
+ 
+
+
+  /* Docs */
+
+  .docs_section{
+   padding: 350px 75px 120px 75px;
+  }
+
+
+  .docs_section > span{
+   font-size: 75px;
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+  }
+
+
+  .docs_grid{
+   margin-top: 120px;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+  }
+
+  .docs_grid_section{
+   position: relative;
+   padding: 20px;
+   height: 270px;
+   border: 1px solid gray;
+  }
+
+  .docs_grid_section::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: inline-block;
+   width: 99%;
+   height: 99%;
+   background: url('../images/doc6.webp') rgba(0, 0, 0, 0.2);
+   background-blend-mode: multiply;
+   background-position: center;
+   background-position: center;
+   background-size: cover;
+   border: 3px solid #D8A016;
+   z-index: 3;
+   opacity: 0;
+   transition: opacity 1s ease;
+ }
+ 
+ .docs_grid_section:hover::before {
+   opacity: 1;
+ }
+
+
+
+  .first_text{
+   position: relative;
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   font-size: 28px;
+   z-index: 3;
+   transition: all 1s ease-in-out;
+  }
+
+  .second_text{
+   opacity: 0;
+   transition: opacity 1s ease;
+   display: block;
+   position: absolute;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   bottom: 30px;
+   left: 30px;
+   color: white;
+   font-size: 16px;
+   z-index: 3;
+   background-color: black;
+   padding: 5px 15px 5px 15px; 
+ }
+
+ .docs_grid_section:hover .second_text {
+   opacity: 1;
+ }
+
+ .g1::before{
+   background: url('../images/gallery/DG.AL_Diamente\ Villa_ID_Kitchen\ Dining.webp') rgba(0, 0, 0, 0.2);
+   background-blend-mode: multiply;
+   background-position: center;
+   background-position: center;
+   background-size: cover;
+ }
+
+ .g2::before{
+   background: url('../images/gallery/DG.AL_Diamente\ Villa_ID_Living.webp') rgba(0, 0, 0, 0.2);
+   background-blend-mode: multiply;
+   background-position: center;
+   background-position: center;
+   background-size: cover;
+ }
+
+ .g3::before{
+   background: url('../images/gallery/DG.AL_TierraViva\ Aerial\ 3.webp') rgba(0, 0, 0, 0.2);
+   background-blend-mode: multiply;
+   background-position: center;
+   background-position: center;
+   background-size: cover;
+ }
+
+ .g4::before{
+   background-blend-mode: multiply;
+   background-position: center;
+   background-position: center;
+   background-size: cover;
+ }
+
+ .g5::before{
+   background: url('../images/gallery/DG.AL_Diamente\ Villa_ID_MasterBedroom.webp') rgba(0, 0, 0, 0.2);
+   background-blend-mode: multiply;
+   background-position: center;
+   background-position: center;
+   background-size: cover;
+ }
+
+ .g6::before{
+   background: url('../images/gallery/DG.AL_Zafiro-Villa_Int_Living.webp') rgba(0, 0, 0, 0.2);
+   background-blend-mode: multiply;
+   background-position: center;
+   background-position: center;
+   background-size: cover;
+ }
+
+  
+
+  .g1{
+   border-left: none;
+   border-right: none;
+   border-bottom: none;
+  }
+
+  .g2{
+   border-left: none;
+   border-right: none;
+  }
+
+  .g3{
+   border-right: none;
+   border-left: none;
+  }
+
+  .g4{
+
+   border-bottom: none;
+  }
+
+  .g4.docs_grid_section:hover::before {
+   opacity: 0;
+   z-index: 0;
+   display: none;
+  }
+
+  .g5{
+   border-bottom: none;
+  }
+
+  .docs_grid_section svg{
+   position: absolute;
+   width: 50px;
+   bottom: 15px;
+   left: 30px;
+   
+  }
+
+  .hexagon{
+   fill: black;
+   stroke: white;
+  }
+
+  .icon{
+   stroke: white;
+  }
+
+
+
+    /* Features */
+
+.features_section{
+   padding: 350px 75px 120px 75px;
+}
+
+.features_section > span{
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   font-size: 130px;
+}
+
+.features_single_section{
+   display: flex;
+   margin-top: 120px;
+}
+
+.feature_text{
+   width: 50%;
+   padding-top: 240px;
+}
+
+.feature_text2{
+   width: 50%;
+   padding-top: 240px;
+   display: flex;
+   justify-content: end;
+   flex-wrap: wrap;
+}
+
+.feature_text3{
+   width: 50%;
+   padding-top: 240px;
+}
+
+.feature_image,
+.feature_image2,
+.feature_image3{
+   position: relative;
+   width: 50%;
+   display: flex;
+}
+
+.feature_image img{
+   width: 105%;
+   height: 550px;
+   position: absolute;
+   top: 120px;
+   left: 90px;
+   object-fit: cover;
+   object-position: center center;
+}
+
+.feature_image2 img{
+   width: 105%;
+   height: 550px;
+   position: absolute;
+   top: 120px;
+   right: 90px;
+   object-fit: cover;
+   object-position: center center;
+}
+
+.feature_image3 img{
+   width: 105%;
+   height: 550px;
+   position: absolute;
+   top: 120px;
+   left: 90px;
+   object-fit: cover;
+   object-position: center center;
+}
+
+
+.feature_text_big{
+   display: block;
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   font-size: 65px;
+   text-align: end;
+
+}
+
+
+.feature_text_small{
+   display: block;
+   font-family: 'PingFang SC', serif;
+   font-weight: 100;
+   font-size: 28px;
+   color: #C1BEBE;
+   width: 420px;
+   margin-left: 50px;
+   margin-top: 125px;
+
+}
+
+
+
+.feature_text_big3{
+   display: block;
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   font-size: 65px;
+   text-align: start;
+
+}
+
+
+.feature_text_small3{
+   display: block;
+   font-family: 'PingFang SC', serif;
+   font-weight: 100;
+   font-size: 28px;
+   color: #C1BEBE;
+   width: 420px;
+   margin-left: 50px;
+   margin-top: 125px;
+   text-align: start;
+
+}
+
+
+
+.feature_text_big2{
+   display: block;
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   font-size: 65px;
+   text-align: start;
+}
+
+
+.feature_text_small2{
+   display: block;
+   font-family: 'PingFang SC', serif;
+   font-weight: 100;
+   font-size: 28px;
+   color: #C1BEBE;
+   width: 420px;
+   margin-left: 50px;
+   margin-top: 35px;
+   margin-bottom: 35px;
+   text-align: end;
+
+}
+
+
+.footer{
+   display: flex;
+   justify-content: space-around;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 180px;
+}
+
+.footer_single_section{
+   width: 50%;
+}
+
+.email_form{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.socials{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 120px;
+}
+
+.sc_tel{
+   color: white;
+   font-family: 'PingFang SC', serif;
+   font-weight: 300;
+   font-size: 21px;
+}
+
+.sc_email{
+   color: white;
+   font-family: 'PingFang SC', serif;
+   font-weight: 300;
+   font-size: 21px;
+}
+
+.social-icons-btn {
+   display: flex;
+   margin-bottom: 50px;
+ }
+ .ico {
+   width: 30px;
+   height: 30px;
+   background: black;
+   border: 2px solid white;
+   margin: 0.2rem;
+   display: flex;
+   padding: 20px;
+   justify-content: center;
+   align-items: center;
+   border-radius: 100%;
+   color: #fff;
+   cursor: pointer;
+   transition:
+     all 0.15s ease;
+ }
+
+ .ico:hover{
+   background: #D8A016;
+ }
+
+
+
+
+
+.form_title{
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   font-size: 65px;
+}
+
+.input{
+   color: white;
+   background: none;
+    border: none;
+    border-bottom: 1px solid #C1BEBE;
+    padding: 15px;
+    width: 450px;
+    margin-bottom: 35px;
+    font-family: 'PingFang SC', serif;
+    font-weight: 300;
+}
+
+
+.ovr{
+   width: 50%;
+}
+
+.form_title2{
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   font-size: 45px;
+}
+
+.input2{
+   color: white;
+   background: none;
+    border: none;
+    border-bottom: 1px solid #C1BEBE;
+    padding: 10px;
+    width: 350px;
+    margin-bottom: 20px;
+    font-family: 'PingFang SC', serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+
+input:focus{
+   color: white;
+   outline: none !important;
+   border-color: #D8A016;
+}
+
+
+input:focus-visible{
+   color: white;
+   outline: none !important;
+   border-color: #D8A016;
+}
+
+input:focus::-webkit-input-placeholder {
+   color: white;
+}
+
+
+textarea{
+   resize: none;
+}
+
+textarea:focus{
+   color: white;
+   outline: none !important;
+   border-color: #D8A016;
+}
+
+
+textarea:focus-visible{
+   color: white;
+   outline: none !important;
+   border-color: #D8A016;
+}
+
+textarea:focus::-webkit-input-placeholder {
+   color: white;
+}
+
+input.btn{
+   border: 1px solid #C1BEBE;
+   padding: 10px 40px;
+   border-radius: 0px;
+   background: none;
+   color: white;
+   font-family: 'PingFang SC', serif;
+   transition: all 0.3s ease;
+}
+
+input.btn:hover{
+   cursor: pointer;
+   background: #D8A016;
+   border-color: #D8A016;
+   color: black;
+}
+
+
+
+/* The Overlay (background) */
+.overlay {
+   /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+   height: 100%;
+   width: 0;
+   position: fixed; /* Stay in place */
+   z-index: 100; /* Sit on top */
+   left: 0;
+   top: 0;
+   background-color: #D8A016; /* Black fallback color */
+   overflow-x: hidden; /* Disable horizontal scroll */
+   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+ }
+ 
+ /* Position the content inside the overlay */
+ .overlay-content {
+   position: relative;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   top: 15%; /* 25% from the top */
+   width: 100%; /* 100% width */
+   text-align: center; /* Centered text/links */
+   margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+ }
+ 
+ /* The navigation links inside the overlay */
+ .overlay a {
+   padding: 8px;
+   text-decoration: none;
+   font-size: 75px;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 100;
+   color: white;
+   display: inline-block; /* Display block instead of inline */
+   transition: 0.3s; /* Transition effects on hover (color) */
+ }
+ 
+ /* When you mouse over the navigation links, change their color */
+ .overlay a:hover, .overlay a:focus {
+   color: black;
+ }
+ 
+ /* Position the close button (top right corner) */
+ .overlay .closebtn {
+   position: absolute;
+   top: 20px;
+   right: 45px;
+   font-size: 60px;
+ }
+
+ .overlay .ov_icon {
+   position: absolute;
+   top: 50px;
+   left: 45px;
+   width: 30px;
+   height: 35px;
+}
+
+.menu_link{
+   position: relative;
+}
+
+.num_link{
+   position: absolute;
+   top: 20px;
+   left: -30px;
+   color: white;
+   font-size: 16px;
+   font-family: 'PingFang SC', serif;
+}
+
+.link2{
+   margin-left: 15%;
+}
+ 
+.link3{
+   margin-right: 15%;
+}
+
+.link4{
+   margin-left: 5%;
+}
+
+
+
+
+
+
+/* The Overlay (background) */
+.overlay2 {
+   /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+   height: 100%;
+   width: 0;
+   position: fixed; /* Stay in place */
+   z-index: 100; /* Sit on top */
+   left: 0;
+   top: 0;
+   background-color: rgba(0, 0, 0, 0.7); /* Black fallback color */
+   overflow-x: hidden; /* Disable horizontal scroll */
+   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+ }
+ 
+ /* Position the content inside the overlay */
+ .overlay-content2{
+   margin: auto;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: black;
+   top: 5%; /* 25% from the top */
+   width: 80%; /* 100% width */
+   height: 85vh;
+   text-align: center; /* Centered text/links */
+   margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+ }
+ 
+ /* The navigation links inside the overlay */
+ .overlay2 a {
+   padding: 8px;
+   text-decoration: none;
+   font-size: 75px;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 100;
+   color: white;
+   display: inline-block; /* Display block instead of inline */
+   transition: 0.3s; /* Transition effects on hover (color) */
+ }
+ 
+ /* When you mouse over the navigation links, change their color */
+ .overlay2 a:hover, .overlay a:focus {
+   color: #D8A016;
+ }
+ 
+ /* Position the close button (top right corner) */
+ .overlay2 .closebtn {
+   position: absolute;
+   top: 20px;
+   right: 45px;
+   font-size: 60px;
+ }
+
+ .overlay2 .ov_icon {
+   position: absolute;
+   top: 50px;
+   left: 45px;
+   width: 30px;
+   height: 35px;
+}
+
+.social-icons-btn2{
+   display: flex;
+   justify-content: center;
+   flex-wrap: nowrap;
+}
+
+
+.sc_tel{
+   display: block;
+   margin-top: 40px;
+}
+.sc_email{
+   display: block;
+}
+
+.sc_txt{
+   color: white;
+   font-family: 'PP Neue Montreal', serif;
+   font-weight: 300;
+   font-size: 30px;
+   display: block;
+   margin-bottom: 40px;
+}
+
+.logo4{
+   width: 45px;
+   display: none;
+   height: 54px;
+   margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+/* The Modal (background) */
+
+.popup_section{
+   /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+   height: 100%;
+   width: 0;
+   display: block;
+   position: fixed; /* Stay in place */
+   z-index: 100; /* Sit on top */
+   left: 0;
+   top: 0;
+   opacity: 0;
+   background-color: rgba(0, 0, 0, 0.7); /* Black fallback color */
+   overflow-x: hidden; /* Disable horizontal scroll */
+   transition: opacity 0.5s ease; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+ }
+ 
+ 
+ .slider2{
+    position: relative;
+ }
+ 
+ .swp2 {
+    width: 70%;
+    max-height: 700px;
+    margin-top: 70px;
+  }
+ 
+  .sw2{
+    padding-bottom: 50px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+ 
+  .sw2 img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center center;
+  }
+ 
+  .swiper_text2{
+    display: none;
+    font-family: 'PP Neue Montreal', serif;
+    color: white;
+    font-weight: 200;
+    font-size: 40px;
+  }
+ 
+ 
+  .slider2 .close{
+    position: absolute;
+    text-decoration: none;
+    font-size: 75px;
+    font-family: 'PP Neue Montreal', serif;
+    font-weight: 100;
+    color: white;
+    top: -5%;
+    right: 45px;
+    font-size: 60px;
+  }
+ 
+  .slider2 .close:hover{
+    cursor: pointer;
+  }
+ 
+ 
+  .swiper-pagination-bullet{
+    background: white !important;
+  }
+ 
+  .swiper-pagination-bullet-active{
+    background: #D8A016 !important;
+  }
+ 
+  .swiper-button-prev{
+    color: #D8A016 !important;
+    z-index: 1000;
+    left: 100px !important;
+  }
+ 
+  .swiper-button-next{
+    color: #D8A016 !important;
+    z-index: 1000;
+    right: 100px !important;
+  }
+ 
+ 
+
+  
+
+
+
+@media screen and (min-width: 1921px) {
+
+   .explore{
+      display: none;
+   }
+
+   .swiper {
+      width: 100%;
+      max-height: 700px;
+      margin-top: 60px;
+    }
+   
+    .swiper-slide{
+      padding-bottom: 50px;
+      height: 700px;
+    }
+   
+    .swiper-slide img{
+      width: 100%;
+      height: 600px;
+    }
+
+    .swp2 {
+      width: 70%;
+      max-height: 700px;
+      margin-top: 70px;
+    }
+   
+    .sw2{
+      padding-bottom: 50px;
+      height: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+   
+    .sw2 img{
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+   .docs_grid_section{
+      height: 350px;
+   }
+
+   .villas_grid_single{
+      min-height: 550px;
+   }
+ 
+}
+
+
+@media screen and (min-width: 1025px) and (max-width: 1251px){
+
+   .explore{
+      display: none;
+   }
+
+
+   .villa_number{
+      font-size: 45px;
+   }
+
+   .hero_footer_name span{
+      font-size: 110px;
+   }
+
+   .hero_footer_location span{
+      font-size: 24px;
+   }
+
+   .text_section span{
+      font-size: 45px;
+   }
+
+   .text_section2{
+      padding-top: 0px;
+   }
+
+   .text_section2 span{
+      font-size: 24px;
+   }
+
+   .villas_section{
+      padding-left: 45px;
+      padding-right: 45px;
+   }
+
+   .text_section{
+      padding-left: 45px;
+      padding-right: 45px;
+   }
+   .text_section2{
+      padding-left: 45px;
+      padding-right: 45px;
+   }
+
+   .about_text .text1{
+      font-size: 24px;
+   }
+
+   .about_text .text2{
+      font-size: 110px;
+   }
+
+   .swiper {
+      width: 100%;
+      max-height: 500px;
+      margin-top: 60px;
+    }
+   
+    .swiper-slide{
+      padding-bottom: 50px;
+      height: 500px;
+    }
+   
+    .swiper-slide img{
+      width: 100%;
+      height: 400px;
+    }
+
+    .swp2 {
+      width: 70%;
+      max-height: 500px;
+      margin-top: 70px;
+    }
+   
+    .sw2{
+      padding-bottom: 50px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+   
+    .sw2 img{
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .about_text{
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+
+    .docs_section{
+      padding: 250px 45px 120px 45px;
+     }
+
+
+     .features_section{
+      padding: 250px 45px 120px 45px;
+   }
+   
+   .features_section > span{
+      font-size: 110px;
+   }
+
+   .feature_text_big{
+      font-size: 50px;
+   }
+
+   .feature_text_big2{
+      font-size: 50px;
+   }
+
+   .feature_text_big3{
+      font-size: 50px;
+   }
+
+   .feature_text_small{
+      font-size: 24px;
+      width: 340px;
+   }
+
+   .feature_text_small2{
+      font-size: 24px;
+      width: 340px;
+   }
+
+   .feature_text_small3{
+      font-size: 24px;
+      width: 340px;
+   }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+   .explore{
+      display: none;
+   }
+
+   .overlay-content2{
+      width: 95%;
+   }
+
+   .overlay2 .closebtn {
+      position: absolute;
+      top: 5px;
+      right: 25px;
+      font-size: 60px;
+    }
+   
+    .overlay2 .ov_icon {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 30px;
+      height: 35px;
+   }
+
+   .social-icons-btn2{
+      display: grid;
+      grid-template-columns: repeat(2, 120px);
+      justify-content: center;
+      justify-items: center;
+   }
+
+
+   .input2{
+      width: 275px;
+   }
+
+   .form_title{
+      font-size: 36px;
+   }
+
+   .ico {
+      width: 25px;
+      height: 25px;
+      padding: 20px;
+   }
+
+   .input{
+       width: 320px;
+       margin-bottom: 25px;
+       font-family: 'PingFang SC', serif;
+       font-weight: 300;
+   }
+   
+
+
+   .hero_footer_name span{
+      font-size: 110px;
+      line-height: 95px;
+   }
+
+   .villas_section{
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   .villa_number{
+      font-size: 36px;
+   }
+
+   .villas_grid_single{
+      min-height: 350px;
+   }
+
+   .villa_name{
+      font-size: 28px;
+   }
+
+   .text_section span{
+      font-size: 36px;
+   }
+
+   .text_section2{
+      padding-top: 0px;
+   }
+
+   .text_section2 span{
+      font-size: 18px;
+   }
+
+   .text_section{
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+   .text_section2{
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   .about_text{
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   .about_text .text1{
+      font-size: 21px;
+   }
+
+   .about_text .text2{
+      font-size: 90px;
+   }
+
+   .swiper {
+      width: 100%;
+      max-height: 400px;
+      margin-top: 60px;
+    }
+   
+    .swiper-slide{
+      padding-bottom: 50px;
+      height: 400px;
+    }
+   
+    .swiper-slide img{
+      width: 100%;
+      height: 300px;
+    }
+
+    .swp2 {
+      width: 70%;
+      max-height: 400px;
+      margin-top: 50px;
+    }
+   
+    .sw2{
+      padding-bottom: 50px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+   
+    .sw2 img{
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .docs_section{
+      padding: 120px 20px 120px 20px;
+     }
+
+
+     .features_section{
+      padding: 120px 20px 120px 20px;
+   }
+   
+   .features_section > span{
+      font-size: 90px;
+   }
+
+   .feature_text_big{
+      font-size: 36px;
+   }
+
+   .feature_text_big2{
+      font-size: 36px;
+   }
+
+   .feature_text_big3{
+      font-size: 36px;
+   }
+
+   .feature_text_small{
+      font-size: 21px;
+      width: 320px;
+   }
+
+   .feature_text_small2{
+      font-size: 21px;
+      width: 320px;
+   }
+
+   .feature_text_small3{
+      font-size: 21px;
+      width: 320px;
+   }
+}
+
+
+
+@media screen and (max-width: 767px){
+
+
+   .explore{
+      display: block;
+   }
+
+   .g4{
+      border-left: none;
+   }
+
+   .overlay-content2{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      height: 87vh;
+   }
+
+   .overlay2 .closebtn {
+      position: absolute;
+      top: 5px;
+      right: 25px;
+      font-size: 60px;
+    }
+   
+    .overlay2 .ov_icon {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 30px;
+      height: 35px;
+   }
+
+   .overlay_socials{
+      display: none;
+   }
+
+   .ovr{
+      width: 100%;
+   }
+
+
+   .input2{
+      width: 275px;
+   }
+
+
+   .overlay .closebtn {
+      position: absolute;
+      top: 5px;
+      right: 25px;
+      font-size: 60px;
+    }
+   
+    .overlay .ov_icon {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 30px;
+      height: 35px;
+   }
+
+   .footer{
+      align-items: center;
+      flex-direction: column;
+   }
+
+   .ico {
+      width: 25px;
+      height: 25px;
+      padding: 20px;
+   }
+
+   .input{
+       width: 320px;
+       margin-bottom: 25px;
+       font-family: 'PingFang SC', serif;
+       font-weight: 300;
+   }
+
+   .socials{
+      margin-bottom: 150px;
+   }
+
+
+
+   .initial_section{
+      max-height: 90vh;
+   }
+
+   .hero_section{
+      min-height: 95vh;
+      max-height: 95vh;
+      padding-bottom: 0px;
+   }
+
+   .hero_header_menu{
+      display: none;
+   }
+
+   .hero_footer_name span{
+      font-size: 60px;
+   }
+
+   .hero{
+      width: 50%;
+   }
+
+   .hero_text2{
+      font-size: 16px;
+   }
+
+   .hero_footer_location span{
+      font-size: 16px;
+   }
+
+
+   .villas_section{
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+
+   .villa_name{
+      font-size: 28px;
+   }
+
+   .learn_more{
+      font-size: 18px;
+      text-decoration: underline;
+   }
+
+   .villa_number{
+      font-size: 36px;
+   }
+
+   .villas_grid_single{
+      min-height: 350px;
+   }
+
+   .villas_grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .villas_grid_single {
+      width: 100%;
+      align-items: center;
+   }
+
+   .villa-1{
+      border-bottom: 1px solid #6a6a6a;
+   }
+
+   .villa-2{
+      border-bottom: 1px solid #6a6a6a;
+   }
+
+   .villa-3{
+      border-left: 0px;
+   }
+
+   .villa-1::before{
+      border-right: 2px solid #D8A016;
+    }
+
+   .villa-2::before{
+      border-right: 0px;
+      border-left: 2px solid #D8A016;
+   }
+
+   .villa-3::before{
+      border-right: 2px solid #D8A016;
+   }
+
+   .villa-4::before{
+      border-right: 0px;
+      border-left: 2px solid #D8A016;
+   }
+
+
+
+   .text_section span{
+      font-size: 32px;
+   }
+
+   .text_section2{
+      padding-top: 0px;
+   }
+
+   .text_section2 span{
+      font-size: 16px;
+   }
+
+   .text_section{
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+   .text_section2{
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+
+   .about_text{
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+
+   .about_text .text1{
+      font-size: 16px;
+   }
+
+   .about_text .text2{
+      font-size: 45px;
+   }
+
+   .swiper {
+      width: 100%;
+      max-height: 400px;
+      margin-top: 30px;
+    }
+   
+    .swiper-slide{
+      padding-bottom: 50px;
+      height: 400px;
+    }
+   
+    .swiper-slide img{
+      width: 100%;
+      height: 300px;
+    }
+
+    .swp2 {
+      width: 90%;
+      max-height: 500px;
+      margin-top: 30px;
+    }
+   
+    .sw2{
+      padding-bottom: 50px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+   
+    .sw2 img{
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .docs_section{
+      padding: 80px 15px 120px 15px;
+     }
+
+
+     .features_section{
+      padding: 120px 20px 120px 20px;
+   }
+   
+   .features_section > span{
+      font-size: 70px;
+   }
+
+   .features_single_section{
+      position: relative;
+   }
+
+   .feature_text_big{
+      font-size: 32px;
+   }
+
+   .feature_text_big2{
+      font-size: 32px;
+   }
+
+   .feature_text_big3{
+      font-size: 32px;
+   }
+
+   .feature_text_small{
+      font-size: 16px;
+      width: 210px;
+   }
+
+   .feature_text_small2{
+      font-size: 16px;
+      width: 210px;
+   }
+
+   .feature_text_small3{
+      font-size: 16px;
+      width: 210px;
+   }
+
+   .feature_text,
+   .feature_text2,
+   .feature_text3{
+      z-index: 3;
+      width: 60%;
+
+   }
+
+   .feature_image,
+   .feature_image2,
+   .feature_image3{
+      width: 40%;
+   }
+
+   .feature_image img,
+   .feature_image2 img,
+   .feature_image3 img{
+      width: 400px;
+      object-position: center center;
+      filter: brightness(70%)
+   }
+
+   .docs_grid_section{
+      max-height: 180px;
+   }
+
+   .first_text{
+      font-size: 24px;
+   }
+
+   .docs_grid{
+      margin-top: 60px;
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .g1{
+      border-left: 1px solid #6a6a6a;
+   }
+
+   .g2{
+      border-left: 1px solid #6a6a6a;
+      border-right: 1px solid #6a6a6a;
+      border-bottom: 0px;
+   }
+
+   .g3{
+      border-right: 1px solid #6a6a6a;
+   }
+
+   .features_section > .features_single_section{
+      margin-top: 0px;
+   }
+
+   .features_section > .features_single_section ~ .features_single_section{
+      margin-top: 150px;
+   }
+
+   .feature_image img{
+      left: -90%;
+   }
+
+   .feature_image2 img{
+      right: -90%;
+   }
+
+   .feature_image3 img{
+      left: -90%;
+   }
+
+   .swiper_text{
+      font-size: 21px;
+      padding-top: 15px;
+   }
+
+   .gallery{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .gallery span{
+      font-size: 55px;
+   }
+
+   .img1{
+     width: 75px;
+     height: 75px;
+   }
+
+   .img2{
+      width: 250px;
+      height: 250px;
+      left: 45%;
+   }
+
+   .img3{
+      width: 160px;
+      height: 160px;
+   }
+
+   .img4{
+      width: 275px;
+      height: 275px;
+      right: 40%;
+   }
+
+   .img5{
+      width: 400px;
+      height: 200px;
+      top: 60%;
+      left: 20%;
+   }
+
+   .img6{
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      right: 48%;
+   }
+
+   .img7{
+      width: 300px;
+      height: 100px;
+      top: 78%;
+      right: 30%;
+   }
+
+   .hero_header_buttons{
+      display: none;
+   }
+
+   .hero_header_burgermenu{
+      display: flex;
+      align-items: center;
+      justify-content: end;
+   }
+
+   .burger_menu{
+      width: 25px;
+      height: 25px;
+   }
+
+   .logo{
+      width: 30px;
+      height: 35px;
+   }
+
+   .docs_section > span{
+      font-size: 45px;
+   }
+
+   .features_section > span{
+      font-size: 45px;
+   }
+
+
+   .overlay a{
+      font-size: 32px;
+   }
+
+   .overlay-content{
+      gap: 35px;
+   }
+
+   .cursor{
+      display: none;
+   }
+
+
+   .slider2{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding-top: 180px;
+   }
+
+   .slider2 .close{
+      top: 5%;
+   }
+
+   .swiper-button-prev{
+      top: 65% !important;
+   }
+
+   .swiper-button-next{
+      top: 65% !important;
+   }
+
+   .swiper-pagination {
+      margin-bottom: 30px;
+   }
+
+
+   #myVideo{
+      display: none;
+   }
+
+   #myVideo2{
+      display: block;
+   }
+
+   .thx_txt1{
+      font-family: 'PP Neue Montreal', serif;
+      color: white;
+      font-weight: 300;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+   
+   .thx_txt2{
+      font-family: 'PingFang SC', serif;
+      color: #C1BEBE;
+      font-weight: 200;
+      font-size: 14px;
+    }
+
+
+    .thanks_text{
+      width: 350px;
+    }
+
+    .thanks_vars{
+      width: 300px;
+      flex-direction: column;
+    }
+
+    .thx_svoy{
+      width: 100%;
+    }
+
+    .thx_lambo{
+      width: 100%;
+    }
+
+    .thx_lambo span{
+      font-size: 16px;
+    }
+
+    .thx_svoy span{
+      font-size: 16px;
+    }
+
+    .thx_svoy{
+      margin-top: 30px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
